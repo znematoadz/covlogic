@@ -1,0 +1,476 @@
+$home-dark: #2f2d36;
+$light-text: #ccc;
+$home-yellow: #fdc00f;
+$text-green: #04a58e;
+
+@font-face {
+  font-family: myriad;
+  src: url(../assets/Fonts/MyriadPro-Regular.otf);
+}
+
+@font-face {
+  font-family: fontAwesome;
+  src: url(../assets/Fonts/FontAwesome5FreeSolid.otf);
+}
+
+@font-face {
+  font-family: helvetica;
+  src: url(../assets/Fonts/Helvetica.ttc);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  font-size: 1vw;
+}
+
+.container-fluid {
+  padding: 0 !important;
+  overflow: hidden;
+}
+
+.container {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+}
+
+#navbar {
+  background: $home-dark !important;
+
+  .nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    .nav-item {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+    }
+    .nav-item a {
+      text-decoration: none !important;
+      color: $light-text;
+
+      &:hover {
+        color: rgb(151, 150, 150);
+      }
+    }
+  }
+}
+
+.dropdown {
+  color: $light-text;
+
+  &:hover {
+    color: rgb(151, 150, 150);
+    cursor: pointer;
+  }
+}
+
+#login {
+  font-weight: 600;
+  color: $light-text;
+}
+
+#searchbar {
+  background: $home-dark;
+  opacity: 0.6;
+  justify-content: center;
+  .search-label {
+    font-size: 1.1rem;
+  }
+  #inputSearch {
+    background-color: #a8a7ab;
+    border: none;
+    box-shadow: none;
+    color: #000;
+    opacity: 1;
+    z-index: 2;
+    font-size: 1.1rem;
+    &::-webkit-input-placeholder {
+      /* WebKit, Blink, Edge */
+      color: #000;
+    }
+
+    &:-moz-placeholder {
+      /* Mozilla Firefox 4 to 18 */
+      color: #000;
+      opacity: 1;
+    }
+
+    &::-moz-placeholder {
+      /* Mozilla Firefox 19+ */
+      color: #000;
+      opacity: 1;
+    }
+
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: #000;
+    }
+  }
+  .search-icon {
+    transform: translateX(-50px);
+    .fa-search {
+      color: #000;
+      opacity: 1;
+      font-size: 1.3em;
+      z-index: 20;
+    }
+  }
+}
+
+.intro {
+  background: url(../assets/img/counseling-woman-on-couch.jpg) top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  max-height: 975px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .intro-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    .logo {
+      display: flex;
+      flex-flow: column;
+      justify-content: center;
+      align-items: center;
+
+      .welcome {
+        font-size: 1.7rem;
+        font-weight: 300;
+        width: 60%;
+      }
+    }
+    .card {
+      width: 60vw;
+      margin: 2vw;
+      background-color: $home-dark;
+      color: $light-text;
+      border: 0.6rem solid #fff;
+      position: relative;
+      .card-body {
+        font-size: 1.8rem;
+        text-align: center;
+        padding: 0px 15px 15px 15px;
+
+        font-weight: 200;
+      }
+
+      .down-arrow {
+        font-size: 2.3rem;
+        color: $home-dark;
+        position: absolute;
+        background-color: $home-dark;
+        border: 0.6rem solid #fff;
+        border-radius: 100px;
+        left: calc(50% - 2.3rem);
+        bottom: calc(-5% - 2.3rem);
+        z-index: 1;
+        padding: 0;
+
+        &::after {
+          content: "";
+          width: 2rem;
+          height: 2rem;
+          background-color: $home-yellow;
+          opacity: 0.8;
+          position: absolute;
+          border-radius: 50%;
+          top: 0;
+          left: 0;
+
+          z-index: -2;
+        }
+      }
+    }
+  }
+}
+
+.mission {
+  height: 300px;
+  max-height: 300px;
+  font-size: 1.3rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.licensees {
+  background: url(../assets/img/boy-on-swing.jpg) center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 750px;
+  max-height: 750px;
+  border-top: 1px solid #63e1c8;
+  position: relative;
+
+  .license-list {
+    position: absolute;
+    top: 25%;
+    left: 15%;
+    text-align: center;
+    .title {
+      font-size: 3.6rem;
+      text-align: center;
+      min-width: 300px;
+
+      font-weight: 200;
+      color: #3e7f4f;
+    }
+  }
+  .license-card {
+    .row {
+      width: 80%;
+      margin: auto;
+    }
+    h1 {
+      background-color: rgba(252, 252, 252, 0.4);
+      width: 100%;
+
+      color: #157262;
+      border: 1px solid #15726256;
+      font-size: 2.2rem;
+      text-align: left;
+      .left {
+        margin-left: 35px;
+      }
+
+      .right {
+        text-align: center;
+        width: 40%;
+        height: 100%;
+        float: right;
+        background-color: rgba(255, 255, 255, 0.5);
+        border-left: 1px solid #15726256;
+        font-weight: 200;
+      }
+    }
+  }
+}
+
+.tech-support {
+  height: 400px;
+  max-height: 400px;
+  font-size: 1.3rem;
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  img {
+    width: 20vw;
+    min-width: 300px;
+  }
+  p {
+    width: 60%;
+    font-weight: 100;
+    color: $text-green;
+
+    a {
+      text-decoration: underline;
+      text-decoration-style: solid;
+      color: $text-green;
+    }
+  }
+}
+
+.wrapper {
+  .img-card {
+    width: 32vw;
+    height: 32vw;
+    color: $text-green;
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: rgb(159, 228, 217);
+      opacity: 0.3;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      width: 20vw;
+      height: 3.6vw;
+      background-color: #fff;
+      top: calc(50% - 0.7vw);
+      left: calc(50% - 10vw);
+      z-index: 1;
+    }
+    .label {
+      position: absolute;
+      font-size: 1.8vw;
+      font-weight: bold;
+      line-height: 4.1vw;
+      width: 20vw;
+      text-align: center;
+      border-bottom: 1px solid #fff;
+      border-top: 1px solid #fff;
+      top: calc(50% - 1vw);
+      left: calc(50% - 10vw);
+      z-index: 2;
+    }
+  }
+
+  #rules {
+    position: relative;
+    background: url(../assets/img/man-on-couch.jpg) center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #renewal {
+    position: relative;
+    background: url(../assets/img/woman-and-child.jpg) center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  #calendar {
+    position: relative;
+    background: url(../assets/img/counseling-woman.jpg) center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.footer {
+  background-color: $home-dark;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+
+  .contact {
+    color: $light-text;
+    padding: 24px 24px 0 24px;
+    p {
+      float: right;
+    }
+    a {
+      color: $light-text !important;
+      text-decoration: underline;
+    }
+  }
+
+  .social {
+    color: $home-yellow;
+    padding: 24px 24px 0 24px;
+    hr {
+      min-width: 110px;
+    }
+    .social-icons {
+      display: flex;
+      flex-flow: row;
+
+      .social-link {
+        color: $home-dark;
+        margin: 3px;
+        background-color: $light-text;
+        width: 3px;
+        height: 3px;
+        padding: 2vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3em;
+        float: left;
+        text-decoration: none;
+      }
+    }
+  }
+
+  .helpful-links {
+    color: $home-yellow;
+    padding: 24px 24px 24px 24px;
+    .resource-wrapper {
+      display: flex;
+      flex-flow: row;
+      .resource {
+        list-style-type: none;
+        a {
+          color: $light-text !important;
+        }
+        &:before {
+          content: "\f061";
+          font-family: fontAwesome;
+          float: left;
+          margin-left: -1.5em;
+          color: $home-yellow;
+        }
+      }
+    }
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 276px) {
+  body,
+  html {
+    font-size: 0.5em;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  body,
+  html {
+    font-size: 1vw;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+}
+
+@media (max-width: 767px) {
+  body,
+  html {
+    font-size: 0.5em;
+  }
+  .social-link {
+    font-size: 2em !important;
+  }
+}
+
+@media (max-width: 486px) {
+  .social-link {
+    font-size: 1.5em !important;
+  }
+}
