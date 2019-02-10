@@ -12,6 +12,11 @@
     "sass": "node-sass -w scss/ -o dist/css/ --recursive",
     "deploy": "gh-pages -d dist"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/znematoadz/covlogic.git"
+  },
+  "homepage": "https://znematoadz.github.io/covlogic",
   "author": "Gerald Jones",
   "license": "ISC"
 }
