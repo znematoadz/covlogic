@@ -266,28 +266,25 @@ header {
   min-height: 400px;
   padding-top: 20px;
   padding-bottom: 20px;
-  font-size: 1.5rem;
   display: flex;
   flex-flow: column;
   text-align: center;
   justify-content: center;
   align-items: center;
-  font-weight: 500;
   background-color: #f4f4f4; }
-  @media (min-width: 768px) {
-    .tech-support {
-      font-size: 1.8em;
-      font-weight: 400; } }
   .tech-support img {
     width: 20vw;
     min-width: 300px; }
   .tech-support p {
-    width: 60%;
-    font-weight: 100;
-    color: #04a58e; }
+    width: 70%;
+    font-weight: 300;
+    color: #04a58e;
+    font-size: 2.1em; }
     @media (max-width: 992px) {
       .tech-support p {
-        width: 80%; } }
+        width: 80%;
+        font-weight: 400;
+        font-size: 1.8rem; } }
     .tech-support p a {
       text-decoration: underline;
       text-decoration-style: solid;
