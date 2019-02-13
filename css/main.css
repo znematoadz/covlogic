@@ -179,7 +179,7 @@ header {
             text-align: center;
             padding: 0px 15px 15px 15px;
             width: 100%;
-            font-weight: 200; }
+            font-weight: 400; }
           .intro .intro-wrapper .container-fluid .card-wrapper .card-item .down-arrow {
             font-size: 2.3rem;
             color: #2f2d36;
@@ -239,7 +239,7 @@ header {
       font-size: 3.6rem;
       text-align: center;
       min-width: 300px;
-      font-weight: 200;
+      font-weight: 400;
       color: #3e7f4f; }
   .licensees .license-card .row {
     width: 80%;
@@ -252,7 +252,8 @@ header {
     font-size: 2.2rem;
     text-align: left; }
     .licensees .license-card h1 .left {
-      margin-left: 35px; }
+      margin-left: 35px;
+      font-weight: 900; }
     .licensees .license-card h1 .right {
       text-align: center;
       width: 40%;
@@ -260,7 +261,7 @@ header {
       float: right;
       background-color: rgba(255, 255, 255, 0.5);
       border-left: 1px solid #15726256;
-      font-weight: 200; }
+      font-weight: 400; }
 
 .tech-support {
   min-height: 400px;
