@@ -23,7 +23,7 @@
   <body>
     <div class="container-fluid">
       <header>
-        <nav id="navbar" class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <nav id="navbar" class="navbar navbar-expand-md navbar-dark bg-dark ">
           <button
             class="navbar-toggler"
             type="button"
@@ -39,8 +39,10 @@
             id="navbarSupportedContent"
             class="navbar collapse navbar-collapse justify-content-center"
           >
-            <ul class="nav navbar-nav text-light align-items-center lead">
-              <li class="nav-item px-2 py-4">
+            <ul
+              class="nav navbar-nav text-light d-flex flex-column flex-md-row align-items-center "
+            >
+              <li class="nav-item px-2 ">
                 <a href="#">About Us</a>
               </li>
               <li class="nav-item px-2"><a href="#">Licensee Info</a></li>
@@ -71,19 +73,17 @@
           </div>
         </nav>
         <div id="searchbar" class="">
-          <form
-            class="form-inline  my-0 input-group py-2 justify-content-center"
-          >
+          <form class="  m-0 input-group py-2 justify-content-center">
             <label
               for="inputSearch"
-              class=" col-form-label text-light font-italic mr-4"
+              class=" col-form-label col-12 col-sm-5 col-md-4 col-xl-3 text-center text-md-right pr-3 text-light font-italic"
               ><span class="search-label "
                 >What can we help you find?</span
               ></label
             >
             <input
               id="inputSearch"
-              class="form-control col-5 "
+              class="form-control col-10 col-sm-5 ml-5 ml-sm-0 "
               type="text"
               placeholder="Search"
               aria-label="Search"
@@ -109,24 +109,26 @@
               Counselors
             </h2>
           </div>
-          <div class="card-deck">
-            <div class="card">
-              <div class="card-body ">
-                Currently<br />
-                Licensed
+          <div class="container-fluid">
+            <div class="row card-wrapper">
+              <div class="col-10 col-sm-6 card-item">
+                <div class="card-body-item ">
+                  Currently<br />
+                  Licensed
+                </div>
+                <i class="down-arrow fas fa-chevron-circle-down"></i>
               </div>
-              <i class="down-arrow fas fa-chevron-circle-down"></i>
-            </div>
-            <div class="card">
-              <div class="card-body ">Applying For<br />a License</div>
-              <i class="down-arrow fas fa-chevron-circle-down"></i>
-            </div>
-            <div class="card">
-              <div class="card-body ">
-                Looking for a<br />Licensed Professional
+              <div class="col-10 col-sm-6 card-item">
+                <div class="card-body-item ">Applying For<br />a License</div>
+                <i class="down-arrow fas fa-chevron-circle-down"></i>
               </div>
+              <div class="col-10 col-sm-6 card-item">
+                <div class="card-body-item ">
+                  Looking for a<br />Licensed Professional
+                </div>
 
-              <i class="down-arrow fas fa-chevron-circle-down"></i>
+                <i class="down-arrow fas fa-chevron-circle-down"></i>
+              </div>
             </div>
           </div>
         </div>
@@ -136,7 +138,7 @@
 
       <section class="container-fluid">
         <div class="mission">
-          <p class="col-8 lead">
+          <p class="col-8">
             The mission of the LPC Board of Examiners is to protect the public
             interest by regulating the practice of the mental health counseling,
             the practice of marriage and family therapy, and the use of the
@@ -232,7 +234,7 @@
         </div>
 
         <div
-          class="wrapper d-flex flex-row justify-content-around align-items-center m-1"
+          class="wrapper d-flex flex-column flex-md-row justify-content-around align-items-center m-1"
         >
           <a id="rules" class="img-card  flex-fill card m-1" href="#"
             ><div class="label">Rules & Regulations</div>
@@ -251,7 +253,7 @@
       <!--footer section-->
 
       <footer class="footer ">
-        <div class="contact col-sm-4 col-4 justify-content-center">
+        <div class="contact col-sm-4 col-6 justify-content-center">
           <p class="">
             <strong
               >Licensed Professional Counselors <br />Board of Examiners</strong
@@ -263,35 +265,43 @@
           </p>
         </div>
 
-        <div class="social col-sm-3 col-8 justify-content-center">
+        <div class="social col-sm-3 col-6 justify-content-center">
           <div>
             <h5 class="follow text-uppercase">Follow us Online</h5>
-            <hr class="bg-warning w-75" />
+            <hr class="bg-warning " />
             <div class="social-icons">
-              <a
-                href="#"
-                class="facebook social-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fab fa-facebook-f"></i>
-              </a>
-              <a
-                href="#"
-                class="twitter social-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fab fa-twitter"></i>
-              </a>
-              <a
-                href="#"
-                class="linkedin social-link"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <i class="fab fa-linkedin-in"></i>
-              </a>
+              <ul>
+                <li>
+                  <a
+                    href="#"
+                    class="facebook social-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fab fa-facebook-f"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="twitter social-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fab fa-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="#"
+                    class="linkedin social-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <i class="fab fa-linkedin-in"></i>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

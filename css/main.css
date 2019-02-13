@@ -17,16 +17,11 @@
 
 body,
 html {
-  font-size: 1vw;
   font-family: myriad; }
 
 .container-fluid {
   padding: 0 !important;
   overflow: hidden; }
-
-.container {
-  padding: 0 !important;
-  margin: 0 !important; }
 
 header {
   position: fixed;
@@ -39,11 +34,24 @@ header {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    font-weight: 200;
+    line-height: 60px; }
     #navbar .nav .nav-item {
       display: flex;
       align-items: baseline;
-      justify-content: center; }
+      justify-content: center;
+      margin: 0.4vw;
+      font-size: 1.4vw; }
+      #navbar .nav .nav-item .btn {
+        font-size: 1.4vw;
+        color: #ccc;
+        font-weight: 600; }
+      @media (max-width: 768px) {
+        #navbar .nav .nav-item {
+          font-size: 18px; }
+          #navbar .nav .nav-item .btn {
+            font-size: 18px; } }
     #navbar .nav .nav-item a {
       text-decoration: none !important;
       color: #ccc; }
@@ -52,20 +60,22 @@ header {
 
 .dropdown {
   color: #ccc; }
+  .dropdown .dropdown-menu {
+    position: absolute !important; }
   .dropdown:hover {
     color: #979696;
     cursor: pointer; }
 
-#login {
-  font-weight: 600;
-  color: #ccc; }
-
 #searchbar {
   background: #2f2d36;
   opacity: 0.6;
-  justify-content: center; }
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px; }
   #searchbar .search-label {
-    font-size: 1.1rem; }
+    font-size: 1.3rem; }
   #searchbar #inputSearch {
     background-color: #a8a7ab;
     border: none;
@@ -75,21 +85,17 @@ header {
     z-index: 2;
     font-size: 1.1rem; }
     #searchbar #inputSearch::-webkit-input-placeholder {
-      /* WebKit, Blink, Edge */
       color: #000; }
     #searchbar #inputSearch:-moz-placeholder {
-      /* Mozilla Firefox 4 to 18 */
       color: #000;
       opacity: 1; }
     #searchbar #inputSearch::-moz-placeholder {
-      /* Mozilla Firefox 19+ */
       color: #000;
       opacity: 1; }
     #searchbar #inputSearch:-ms-input-placeholder {
-      /* Internet Explorer 10-11 */
       color: #000; }
   #searchbar .search-icon {
-    transform: translateX(-50px); }
+    transform: translateX(-35px); }
     #searchbar .search-icon .fa-search {
       color: #000;
       opacity: 1;
@@ -97,11 +103,10 @@ header {
       z-index: 20; }
 
 .intro {
-  background: url(../assets/img/counseling-woman-on-couch.jpg) top center;
+  background: url(../assets/img/counseling-woman-on-couch.jpg) center top;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
-  max-height: 975px;
+  min-height: 100vh;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -117,63 +122,93 @@ header {
     top: 0;
     left: 0; }
   .intro .intro-wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-    margin-top: 10vh; }
+    margin-top: 10vh;
+    font-size: 2rem; }
     .intro .intro-wrapper .logo {
       display: flex;
       flex-flow: column;
       justify-content: center;
       align-items: center; }
+      .intro .intro-wrapper .logo img {
+        margin-top: 35px; }
+        @media (max-width: 992px) {
+          .intro .intro-wrapper .logo img {
+            width: 30vw;
+            max-width: 175px;
+            height: auto; } }
       .intro .intro-wrapper .logo .welcome {
-        font-size: 1.7rem;
-        font-weight: 300;
-        width: 60%; }
-    .intro .intro-wrapper .card {
-      width: 60vw;
-      margin: 2vw;
-      background-color: #2f2d36;
-      color: #ccc;
-      border: 0.6rem solid #fff;
-      position: relative; }
-      .intro .intro-wrapper .card .card-body {
         font-size: 1.8rem;
-        text-align: center;
-        padding: 0px 15px 15px 15px;
-        font-weight: 200; }
-      .intro .intro-wrapper .card .down-arrow {
-        font-size: 2.3rem;
-        color: #2f2d36;
-        position: absolute;
-        background-color: #2f2d36;
-        border: 0.6rem solid #fff;
-        border-radius: 100px;
-        left: calc(50% - 2.3rem);
-        bottom: calc(-5% - 2.3rem);
-        z-index: 1;
-        padding: 0; }
-        .intro .intro-wrapper .card .down-arrow::after {
-          content: "";
-          width: 2rem;
-          height: 2rem;
-          background-color: #fdc00f;
-          opacity: 0.8;
-          position: absolute;
-          border-radius: 50%;
-          top: 0;
-          left: 0;
-          z-index: -2; }
+        font-weight: 400;
+        width: 80%;
+        text-align: center; }
+        @media (min-width: 992px) {
+          .intro .intro-wrapper .logo .welcome {
+            font-size: 2.4rem;
+            width: 55%; } }
+    .intro .intro-wrapper .container-fluid {
+      margin: auto;
+      width: 100%;
+      overflow: visible; }
+      .intro .intro-wrapper .container-fluid .card-wrapper {
+        justify-content: center;
+        align-items: center; }
+        @media (max-width: 768px) {
+          .intro .intro-wrapper .container-fluid .card-wrapper {
+            -ms-flex-flow: column;
+            flex-flow: column; } }
+        .intro .intro-wrapper .container-fluid .card-wrapper .card-item {
+          margin: 1vw;
+          background-color: #2f2d36;
+          color: #ccc;
+          border: 0.6rem solid #fff;
+          position: relative;
+          margin-bottom: 25px; }
+          @media (min-width: 768px) {
+            .intro .intro-wrapper .container-fluid .card-wrapper .card-item {
+              -ms-flex: 0 0 30%;
+              flex: 0 0 30%;
+              max-width: 30%; } }
+          .intro .intro-wrapper .container-fluid .card-wrapper .card-item .card-body-item {
+            text-align: center;
+            padding: 0px 15px 15px 15px;
+            width: 100%;
+            font-weight: 200; }
+          .intro .intro-wrapper .container-fluid .card-wrapper .card-item .down-arrow {
+            font-size: 2.3rem;
+            color: #2f2d36;
+            position: absolute;
+            background-color: #2f2d36;
+            border: 0.6rem solid #fff;
+            border-radius: 100px;
+            left: calc(50% - 2.3rem);
+            bottom: calc(-5% - 2.3rem);
+            z-index: 1;
+            padding: 0; }
+            .intro .intro-wrapper .container-fluid .card-wrapper .card-item .down-arrow::after {
+              content: "";
+              width: 2rem;
+              height: 2rem;
+              background-color: #fdc00f;
+              opacity: 0.8;
+              position: absolute;
+              border-radius: 50%;
+              top: 0;
+              left: 0;
+              z-index: -2; }
 
 .mission {
-  height: 300px;
-  max-height: 300px;
-  font-size: 1.3rem;
+  min-height: 300px;
+  font-size: 1em;
   display: flex;
   text-align: center;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 200; }
+  @media (min-width: 768px) {
+    .mission {
+      font-size: 2.1em; } }
 
 .licensees {
   background: url(../assets/img/boy-on-swing.jpg) center top;
@@ -186,8 +221,11 @@ header {
   .licensees .license-list {
     position: absolute;
     top: 25%;
-    left: 15%;
+    left: 5%;
     text-align: center; }
+    @media (min-width: 768px) {
+      .licensees .license-list {
+        left: 15%; } }
     .licensees .license-list .title {
       font-size: 3.6rem;
       text-align: center;
@@ -216,14 +254,16 @@ header {
       font-weight: 200; }
 
 .tech-support {
-  height: 400px;
-  max-height: 400px;
+  min-height: 400px;
   font-size: 1.3rem;
   display: flex;
   flex-flow: column;
   text-align: center;
   justify-content: center;
   align-items: center; }
+  @media (max-width: 992px) {
+    .tech-support {
+      font-size: 1rem; } }
   .tech-support img {
     width: 20vw;
     min-width: 300px; }
@@ -231,15 +271,22 @@ header {
     width: 60%;
     font-weight: 100;
     color: #04a58e; }
+    @media (max-width: 992px) {
+      .tech-support p {
+        width: 80%; } }
     .tech-support p a {
       text-decoration: underline;
       text-decoration-style: solid;
       color: #04a58e; }
 
 .wrapper .img-card {
-  width: 32vw;
-  height: 32vw;
-  color: #04a58e; }
+  color: #04a58e;
+  width: 95vw;
+  height: 95vw; }
+  @media (min-width: 768px) {
+    .wrapper .img-card {
+      width: 30vw;
+      height: 30vw; } }
   .wrapper .img-card::before {
     content: "";
     width: 100%;
@@ -252,24 +299,27 @@ header {
   .wrapper .img-card::after {
     content: "";
     position: absolute;
-    width: 20vw;
-    height: 3.6vw;
+    width: 60%;
+    height: 65px;
     background-color: #fff;
-    top: calc(50% - 0.7vw);
-    left: calc(50% - 10vw);
+    top: calc(50% - 10px);
+    left: calc(50% - 30%);
     z-index: 1; }
   .wrapper .img-card .label {
     position: absolute;
-    font-size: 1.8vw;
+    font-size: 3.4vw;
     font-weight: bold;
-    line-height: 4.1vw;
-    width: 20vw;
+    line-height: 75px;
+    width: 60%;
     text-align: center;
     border-bottom: 1px solid #fff;
     border-top: 1px solid #fff;
-    top: calc(50% - 1vw);
-    left: calc(50% - 10vw);
+    top: calc(50% - 16px);
+    left: calc(50% - 30%);
     z-index: 2; }
+    @media (min-width: 768px) {
+      .wrapper .img-card .label {
+        font-size: 1.8vw; } }
 
 .wrapper #rules {
   position: relative;
@@ -298,34 +348,61 @@ header {
     color: #ccc;
     padding: 24px 24px 0 24px; }
     .footer .contact p {
-      float: right; }
+      float: right;
+      padding-right: 0; }
+      @media (min-width: 768px) {
+        .footer .contact p {
+          padding-right: 52px; } }
     .footer .contact a {
       color: #ccc !important;
       text-decoration: underline; }
   .footer .social {
     color: #fdc00f;
-    padding: 24px 24px 0 24px; }
+    padding: 24px 0 0 16px; }
+    @media (max-width: 700px) {
+      .footer .social h5 {
+        font-size: 1rem; } }
     .footer .social hr {
-      min-width: 110px; }
+      width: 20vw;
+      min-width: 110px;
+      max-width: 190px; }
     .footer .social .social-icons {
-      display: flex;
-      flex-flow: row; }
-      .footer .social .social-icons .social-link {
-        color: #2f2d36;
-        margin: 3px;
-        background-color: #ccc;
-        width: 3px;
-        height: 3px;
-        padding: 2vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 3em;
-        float: left;
-        text-decoration: none; }
+      font-family: "Open Sans";
+      font-weight: 300;
+      color: #ccc; }
+      .footer .social .social-icons ul {
+        list-style: none;
+        margin: 0;
+        padding: 0; }
+        .footer .social .social-icons ul li {
+          text-align: center;
+          display: inline-block;
+          vertical-align: middle;
+          background-color: #ccc;
+          width: 40px;
+          height: 40px; }
+          @media (min-width: 992px) {
+            .footer .social .social-icons ul li {
+              width: 60px;
+              height: 60px; } }
+          .footer .social .social-icons ul li .social-link {
+            display: block;
+            font-size: 2em;
+            margin: 0 5px;
+            text-decoration: none;
+            padding: 3px;
+            align-self: center;
+            color: #2f2d36; }
+            @media (min-width: 992px) {
+              .footer .social .social-icons ul li .social-link {
+                font-size: 2.5em;
+                padding: 6px 0 0 0; } }
   .footer .helpful-links {
     color: #fdc00f;
     padding: 24px 24px 24px 24px; }
+    @media (max-width: 700px) {
+      .footer .helpful-links h5 {
+        font-size: 1rem; } }
     .footer .helpful-links .resource-wrapper {
       display: flex;
       flex-flow: row; }
@@ -343,20 +420,10 @@ header {
 @media (min-width: 276px) {
   body,
   html {
-    font-size: 0.5em; } }
+    font-size: 0.8rem; }
+  .card-body-item {
+    font-size: 1.4rem; } }
 
-@media (min-width: 992px) {
-  body,
-  html {
-    font-size: 1vw; } }
-
-@media (max-width: 767px) {
-  body,
-  html {
-    font-size: 0.5em; }
-  .social-link {
-    font-size: 2em !important; } }
-
-@media (max-width: 486px) {
-  .social-link {
-    font-size: 1.5em !important; } }
+@media (min-width: 1200px) {
+  .card-body-item {
+    font-size: 2rem; } }
