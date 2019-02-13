@@ -100,8 +100,7 @@ header {
     #searchbar #inputSearch:-ms-input-placeholder {
       color: #000; }
   #searchbar .search-icon {
-    transform: translateX(-35px);
-    position: absolute; }
+    transform: translateX(-50px); }
     #searchbar .search-icon .fa-search {
       color: #000;
       opacity: 1;
