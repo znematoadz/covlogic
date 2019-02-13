@@ -41,17 +41,20 @@ header {
       display: flex;
       align-items: baseline;
       justify-content: center;
-      margin: 0.4vw;
-      font-size: 1.4vw; }
+      margin: 0.6vw;
+      font-size: 18px; }
       #navbar .nav .nav-item .btn {
-        font-size: 1.4vw;
+        font-size: 18px;
         color: #ccc;
         font-weight: 600; }
-      @media (max-width: 768px) {
+      @media (max-width: 991px) {
         #navbar .nav .nav-item {
-          font-size: 18px; }
+          font-size: 18px;
+          margin: 0.1vw;
+          min-height: 75px; }
           #navbar .nav .nav-item .btn {
-            font-size: 18px; } }
+            font-size: 18px;
+            margin: 0.1vw; } }
     #navbar .nav .nav-item a {
       text-decoration: none !important;
       color: #ccc; }
@@ -87,7 +90,7 @@ header {
     opacity: 1;
     z-index: 2;
     font-size: 1.1rem;
-    width: 100%;
+    width: 50%;
     position: relative;
     height: 35px; }
     #searchbar #inputSearch::-webkit-input-placeholder {
@@ -186,7 +189,7 @@ header {
             text-align: center;
             padding: 0px 15px 15px 15px;
             width: 100%;
-            font-weight: 400;
+            font-weight: 200;
             font-size: 1.4rem; }
             @media (max-width: 765px) {
               .intro .intro-wrapper .container-fluid .card-wrapper .card-item .card-body-item {
