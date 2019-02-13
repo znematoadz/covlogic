@@ -26,18 +26,12 @@ $text-green: #04a58e;
 
 body,
 html {
-  font-size: 1vw;
   font-family: myriad;
 }
 
 .container-fluid {
   padding: 0 !important;
   overflow: hidden;
-}
-
-.container {
-  padding: 0 !important;
-  margin: 0 !important;
 }
 
 header {
@@ -54,10 +48,28 @@ header {
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+
+    font-weight: 200;
+    line-height: 60px;
+
     .nav-item {
       display: flex;
       align-items: baseline;
       justify-content: center;
+      margin: 0.4vw;
+      font-size: 1.4vw;
+
+      .btn {
+        font-size: 1.4vw;
+        color: $light-text;
+        font-weight: 600;
+      }
+      @media (max-width: 768px) {
+        font-size: 18px;
+        .btn {
+          font-size: 18px;
+        }
+      }
     }
     .nav-item a {
       text-decoration: none !important;
@@ -72,24 +84,25 @@ header {
 
 .dropdown {
   color: $light-text;
-
+  .dropdown-menu {
+    position: absolute !important;
+  }
   &:hover {
     color: rgb(151, 150, 150);
     cursor: pointer;
   }
 }
 
-#login {
-  font-weight: 600;
-  color: $light-text;
-}
-
 #searchbar {
   background: $home-dark;
   opacity: 0.6;
+  display: flex;
+  flex-flow: row;
   justify-content: center;
+  align-items: center;
+  min-height: 60px;
   .search-label {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
   #inputSearch {
     background-color: #a8a7ab;
@@ -100,29 +113,25 @@ header {
     z-index: 2;
     font-size: 1.1rem;
     &::-webkit-input-placeholder {
-      /* WebKit, Blink, Edge */
       color: #000;
     }
 
     &:-moz-placeholder {
-      /* Mozilla Firefox 4 to 18 */
       color: #000;
       opacity: 1;
     }
 
     &::-moz-placeholder {
-      /* Mozilla Firefox 19+ */
       color: #000;
       opacity: 1;
     }
 
     &:-ms-input-placeholder {
-      /* Internet Explorer 10-11 */
       color: #000;
     }
   }
   .search-icon {
-    transform: translateX(-50px);
+    transform: translateX(-35px);
     .fa-search {
       color: #000;
       opacity: 1;
@@ -133,11 +142,11 @@ header {
 }
 
 .intro {
-  background: url(../assets/img/counseling-woman-on-couch.jpg) top center;
+  background: url(../assets/img/counseling-woman-on-couch.jpg) center top;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 100vh;
-  max-height: 975px;
+  min-height: 100vh;
+
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -154,62 +163,91 @@ header {
     left: 0;
   }
   .intro-wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
     margin-top: 10vh;
+    font-size: 2rem;
     .logo {
       display: flex;
       flex-flow: column;
       justify-content: center;
       align-items: center;
+      img {
+        margin-top: 35px;
 
+        @media (max-width: 992px) {
+          width: 30vw;
+          max-width: 175px;
+          height: auto;
+        }
+      }
       .welcome {
-        font-size: 1.7rem;
-        font-weight: 300;
-        width: 60%;
+        font-size: 1.8rem;
+        font-weight: 400;
+        width: 80%;
+        text-align: center;
+
+        @media (min-width: 992px) {
+          font-size: 2.4rem;
+          width: 55%;
+        }
       }
     }
-    .card {
-      width: 60vw;
-      margin: 2vw;
-      background-color: $home-dark;
-      color: $light-text;
-      border: 0.6rem solid #fff;
-      position: relative;
-      .card-body {
-        font-size: 1.8rem;
-        text-align: center;
-        padding: 0px 15px 15px 15px;
+    .container-fluid {
+      margin: auto;
+      width: 100%;
+      overflow: visible;
+      .card-wrapper {
+        justify-content: center;
+        align-items: center;
+        @media (max-width: 768px) {
+          -ms-flex-flow: column;
+          flex-flow: column;
+        }
+        .card-item {
+          margin: 1vw;
+          background-color: $home-dark;
+          color: $light-text;
+          border: 0.6rem solid #fff;
+          position: relative;
+          margin-bottom: 25px;
+          @media (min-width: 768px) {
+            -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+            max-width: 30%;
+          }
 
-        font-weight: 200;
-      }
+          .card-body-item {
+            text-align: center;
+            padding: 0px 15px 15px 15px;
+            width: 100%;
+            font-weight: 200;
+          }
 
-      .down-arrow {
-        font-size: 2.3rem;
-        color: $home-dark;
-        position: absolute;
-        background-color: $home-dark;
-        border: 0.6rem solid #fff;
-        border-radius: 100px;
-        left: calc(50% - 2.3rem);
-        bottom: calc(-5% - 2.3rem);
-        z-index: 1;
-        padding: 0;
+          .down-arrow {
+            font-size: 2.3rem;
+            color: $home-dark;
+            position: absolute;
+            background-color: $home-dark;
+            border: 0.6rem solid #fff;
+            border-radius: 100px;
+            left: calc(50% - 2.3rem);
+            bottom: calc(-5% - 2.3rem);
+            z-index: 1;
+            padding: 0;
 
-        &::after {
-          content: "";
-          width: 2rem;
-          height: 2rem;
-          background-color: $home-yellow;
-          opacity: 0.8;
-          position: absolute;
-          border-radius: 50%;
-          top: 0;
-          left: 0;
+            &::after {
+              content: "";
+              width: 2rem;
+              height: 2rem;
+              background-color: $home-yellow;
+              opacity: 0.8;
+              position: absolute;
+              border-radius: 50%;
+              top: 0;
+              left: 0;
 
-          z-index: -2;
+              z-index: -2;
+            }
+          }
         }
       }
     }
@@ -217,13 +255,18 @@ header {
 }
 
 .mission {
-  height: 300px;
-  max-height: 300px;
-  font-size: 1.3rem;
+  min-height: 300px;
+  font-size: 1em;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 200;
+  @media (min-width: 768px) {
+    font-size: 2.1em;
+  }
 }
 
 .licensees {
@@ -238,8 +281,11 @@ header {
   .license-list {
     position: absolute;
     top: 25%;
-    left: 15%;
+    left: 5%;
     text-align: center;
+    @media (min-width: 768px) {
+      left: 15%;
+    }
     .title {
       font-size: 3.6rem;
       text-align: center;
@@ -280,14 +326,17 @@ header {
 }
 
 .tech-support {
-  height: 400px;
-  max-height: 400px;
+  min-height: 400px;
+
   font-size: 1.3rem;
   display: flex;
   flex-flow: column;
   text-align: center;
   justify-content: center;
   align-items: center;
+  @media (max-width: 992px) {
+    font-size: 1rem;
+  }
   img {
     width: 20vw;
     min-width: 300px;
@@ -296,7 +345,9 @@ header {
     width: 60%;
     font-weight: 100;
     color: $text-green;
-
+    @media (max-width: 992px) {
+      width: 80%;
+    }
     a {
       text-decoration: underline;
       text-decoration-style: solid;
@@ -307,10 +358,13 @@ header {
 
 .wrapper {
   .img-card {
-    width: 32vw;
-    height: 32vw;
     color: $text-green;
-
+    width: 95vw;
+    height: 95vw;
+    @media (min-width: 768px) {
+      width: 30vw;
+      height: 30vw;
+    }
     &::before {
       content: "";
       width: 100%;
@@ -324,25 +378,29 @@ header {
     &::after {
       content: "";
       position: absolute;
-      width: 20vw;
-      height: 3.6vw;
+      width: 60%;
+      height: 65px;
       background-color: #fff;
-      top: calc(50% - 0.7vw);
-      left: calc(50% - 10vw);
+      top: calc(50% - 10px);
+      left: calc(50% - 30%);
       z-index: 1;
     }
     .label {
       position: absolute;
-      font-size: 1.8vw;
+      font-size: 3.4vw;
       font-weight: bold;
-      line-height: 4.1vw;
-      width: 20vw;
+      line-height: 75px;
+      width: 60%;
       text-align: center;
       border-bottom: 1px solid #fff;
       border-top: 1px solid #fff;
-      top: calc(50% - 1vw);
-      left: calc(50% - 10vw);
+      top: calc(50% - 16px);
+      left: calc(50% - 30%);
       z-index: 2;
+
+      @media (min-width: 768px) {
+        font-size: 1.8vw;
+      }
     }
   }
 
@@ -377,8 +435,13 @@ header {
   .contact {
     color: $light-text;
     padding: 24px 24px 0 24px;
+
     p {
       float: right;
+      padding-right: 0;
+      @media (min-width: 768px) {
+        padding-right: 52px;
+      }
     }
     a {
       color: $light-text !important;
@@ -388,27 +451,52 @@ header {
 
   .social {
     color: $home-yellow;
-    padding: 24px 24px 0 24px;
+    padding: 24px 0 0 16px;
+    @media (max-width: 700px) {
+      h5 {
+        font-size: 1rem;
+      }
+    }
     hr {
+      width: 20vw;
       min-width: 110px;
+      max-width: 190px;
     }
     .social-icons {
-      display: flex;
-      flex-flow: row;
+      font-family: "Open Sans";
+      font-weight: 300;
 
-      .social-link {
-        color: $home-dark;
-        margin: 3px;
-        background-color: $light-text;
-        width: 3px;
-        height: 3px;
-        padding: 2vw;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 3em;
-        float: left;
-        text-decoration: none;
+      color: $light-text;
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        li {
+          text-align: center;
+          display: inline-block;
+          vertical-align: middle;
+          background-color: $light-text;
+          width: 40px;
+          height: 40px;
+          @media (min-width: 992px) {
+            width: 60px;
+            height: 60px;
+          }
+
+          .social-link {
+            display: block;
+            font-size: 2em;
+            margin: 0 5px;
+            text-decoration: none;
+            padding: 3px;
+            align-self: center;
+            color: $home-dark;
+            @media (min-width: 992px) {
+              font-size: 2.5em;
+              padding: 6px 0 0 0;
+            }
+          }
+        }
       }
     }
   }
@@ -416,6 +504,11 @@ header {
   .helpful-links {
     color: $home-yellow;
     padding: 24px 24px 24px 24px;
+    @media (max-width: 700px) {
+      h5 {
+        font-size: 1rem;
+      }
+    }
     .resource-wrapper {
       display: flex;
       flex-flow: row;
@@ -440,7 +533,10 @@ header {
 @media (min-width: 276px) {
   body,
   html {
-    font-size: 0.5em;
+    font-size: 0.8rem;
+  }
+  .card-body-item {
+    font-size: 1.4rem;
   }
 }
 
@@ -450,28 +546,11 @@ header {
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  body,
-  html {
-    font-size: 1vw;
-  }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-}
-
-@media (max-width: 767px) {
-  body,
-  html {
-    font-size: 0.5em;
-  }
-  .social-link {
-    font-size: 2em !important;
-  }
-}
-
-@media (max-width: 486px) {
-  .social-link {
-    font-size: 1.5em !important;
+  .card-body-item {
+    font-size: 2rem;
   }
 }
