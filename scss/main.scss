@@ -462,10 +462,14 @@ header {
         font-size: 1rem;
       }
     }
-    hr {
+    .hr {
       width: 20vw;
+      height: 1px;
       min-width: 110px;
       max-width: 190px;
+
+      margin-top: 1rem;
+      margin-bottom: 1rem;
     }
     .social-icons {
       font-family: "Open Sans";

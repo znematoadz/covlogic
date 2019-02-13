@@ -366,10 +366,13 @@ header {
     @media (max-width: 700px) {
       .footer .social h5 {
         font-size: 1rem; } }
-    .footer .social hr {
+    .footer .social .hr {
       width: 20vw;
+      height: 1px;
       min-width: 110px;
-      max-width: 190px; }
+      max-width: 190px;
+      margin-top: 1rem;
+      margin-bottom: 1rem; }
     .footer .social .social-icons {
       font-family: "Open Sans";
       font-weight: 300;
