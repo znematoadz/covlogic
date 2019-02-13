@@ -203,11 +203,14 @@ header {
       .card-wrapper {
         justify-content: center;
         align-items: center;
+        min-height: 100px;
         @media (max-width: 768px) {
           -ms-flex-flow: column;
           flex-flow: column;
         }
         .card-item {
+          -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
           margin: 1vw;
           background-color: $home-dark;
           color: $light-text;
@@ -266,8 +269,8 @@ header {
   text-align: center;
   justify-content: center;
   align-items: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-weight: 200;
   @media (min-width: 768px) {
     font-size: 2.1em;
@@ -332,7 +335,8 @@ header {
 
 .tech-support {
   min-height: 400px;
-
+  padding-top: 20px;
+  padding-bottom: 20px;
   font-size: 1.3rem;
   display: flex;
   flex-flow: column;
