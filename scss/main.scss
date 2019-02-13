@@ -26,7 +26,8 @@ $text-green: #04a58e;
 
 body,
 html {
-  font-family: myriad;
+  font-family: myriad, helvetica, fontawesome;
+  font-size: 0.8rem;
 }
 
 .container-fluid {
@@ -190,7 +191,7 @@ header {
       }
       .welcome {
         font-size: 1.8rem;
-        font-weight: 400;
+        font-weight: 200;
         width: 80%;
         text-align: center;
 
@@ -221,6 +222,7 @@ header {
           border: 0.6rem solid #fff;
           position: relative;
           margin-bottom: 25px;
+
           @media (min-width: 768px) {
             -ms-flex: 0 0 30%;
             flex: 0 0 30%;
@@ -232,6 +234,11 @@ header {
             padding: 0px 15px 15px 15px;
             width: 100%;
             font-weight: 400;
+            font-size: 1.4rem;
+
+            @media (min-width: 1200px) {
+              font-size: 2rem;
+            }
           }
 
           .down-arrow {
@@ -549,31 +556,5 @@ header {
         }
       }
     }
-  }
-}
-
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 276px) {
-  body,
-  html {
-    font-size: 0.8rem;
-  }
-  .card-body-item {
-    font-size: 1.4rem;
-  }
-}
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) {
-}
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) {
-}
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) {
-  .card-body-item {
-    font-size: 2rem;
   }
 }
