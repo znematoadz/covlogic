@@ -101,6 +101,9 @@ header {
   justify-content: center;
   align-items: center;
   min-height: 60px;
+  .input-group {
+    flex-wrap: nowrap;
+  }
   .search-label {
     font-size: 1.3rem;
   }
