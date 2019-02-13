@@ -205,17 +205,18 @@ header {
 
 .mission {
   min-height: 300px;
-  font-size: 1em;
+  font-size: 1.5rem;
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
   padding-top: 20px;
   padding-bottom: 20px;
-  font-weight: 200; }
+  font-weight: 400; }
   @media (min-width: 768px) {
     .mission {
-      font-size: 2.1em; } }
+      font-size: 2.1em;
+      font-weight: 300; } }
 
 .licensees {
   background: url(../assets/img/boy-on-swing-2.jpg) center top;
@@ -264,15 +265,17 @@ header {
   min-height: 400px;
   padding-top: 20px;
   padding-bottom: 20px;
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   display: flex;
   flex-flow: column;
   text-align: center;
   justify-content: center;
-  align-items: center; }
-  @media (max-width: 992px) {
+  align-items: center;
+  font-weight: 500; }
+  @media (min-width: 768px) {
     .tech-support {
-      font-size: 1rem; } }
+      font-size: 1.8em;
+      font-weight: 300; } }
   .tech-support img {
     width: 20vw;
     min-width: 300px; }
