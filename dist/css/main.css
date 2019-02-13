@@ -74,6 +74,8 @@ header {
   justify-content: center;
   align-items: center;
   min-height: 60px; }
+  #searchbar .input-group {
+    flex-wrap: nowrap; }
   #searchbar .search-label {
     font-size: 1.3rem; }
   #searchbar #inputSearch {
