@@ -88,7 +88,8 @@ header {
     z-index: 2;
     font-size: 1.1rem;
     width: 100%;
-    position: relative; }
+    position: relative;
+    height: 35px; }
     #searchbar #inputSearch::-webkit-input-placeholder {
       color: #000; }
     #searchbar #inputSearch:-moz-placeholder {
@@ -99,13 +100,15 @@ header {
       opacity: 1; }
     #searchbar #inputSearch:-ms-input-placeholder {
       color: #000; }
-  #searchbar .search-icon {
-    transform: translateX(-50px); }
-    #searchbar .search-icon .fa-search {
+  #searchbar .search-icon-btn {
+    height: 100%;
+    transform: translateX(-35px);
+    z-index: 10;
+    height: 35px; }
+    #searchbar .search-icon-btn .fa-search {
       color: #000;
       opacity: 1;
-      font-size: 1.3em;
-      z-index: 20; }
+      font-size: 1.3em; }
 
 .intro {
   background: url(../assets/img/counseling-woman-on-couch.jpg) center top;
