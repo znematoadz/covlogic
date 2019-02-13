@@ -152,6 +152,7 @@ header {
   justify-content: center;
   align-items: center;
   position: relative;
+
   &::before {
     content: "";
     width: 100%;
@@ -165,6 +166,9 @@ header {
   .intro-wrapper {
     margin-top: 10vh;
     font-size: 2rem;
+    @media (min-width: 1700px) {
+      width: 60%;
+    }
     .logo {
       display: flex;
       flex-flow: column;
@@ -270,7 +274,7 @@ header {
 }
 
 .licensees {
-  background: url(../assets/img/boy-on-swing.jpg) center top;
+  background: url(../assets/img/boy-on-swing-2.jpg) center top;
   background-size: cover;
   background-repeat: no-repeat;
   height: 750px;
