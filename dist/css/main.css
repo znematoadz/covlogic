@@ -87,7 +87,8 @@ header {
     opacity: 1;
     z-index: 2;
     font-size: 1.1rem;
-    width: 100%; }
+    width: 100%;
+    position: relative; }
     #searchbar #inputSearch::-webkit-input-placeholder {
       color: #000; }
     #searchbar #inputSearch:-moz-placeholder {
@@ -99,7 +100,8 @@ header {
     #searchbar #inputSearch:-ms-input-placeholder {
       color: #000; }
   #searchbar .search-icon {
-    transform: translateX(-35px); }
+    transform: translateX(-35px);
+    position: absolute; }
     #searchbar .search-icon .fa-search {
       color: #000;
       opacity: 1;

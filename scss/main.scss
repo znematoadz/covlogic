@@ -118,7 +118,7 @@ header {
     z-index: 2;
     font-size: 1.1rem;
     width: 100%;
-
+    position: relative;
     &::-webkit-input-placeholder {
       color: #000;
     }
@@ -139,6 +139,7 @@ header {
   }
   .search-icon {
     transform: translateX(-35px);
+    position: absolute;
     .fa-search {
       color: #000;
       opacity: 1;
