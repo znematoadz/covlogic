@@ -17,7 +17,10 @@
 
 body,
 html {
-  font-family: myriad, helvetica, fontAwesome; }
+  font-family: myriad, helvetica, fontAwesome;
+  padding: 0;
+  margin: 0;
+  width: 100%; }
 
 .container-fluid {
   padding: 0 !important;
