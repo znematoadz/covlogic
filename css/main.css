@@ -28,7 +28,7 @@ html {
 
 header {
   position: fixed;
-  z-index: 2;
+  z-index: 10;
   width: 100%; }
 
 #navbar {
@@ -83,13 +83,16 @@ header {
   background: #2f2d36;
   opacity: 0.6;
   display: flex;
+  display: -ms-flexbox;
   flex-flow: row;
+  -ms-flex-flow: row;
   justify-content: center;
   align-items: center;
   min-height: 60px; }
   @media (min-width: 576px) {
     #searchbar .input-group {
-      flex-wrap: nowrap; } }
+      flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap; } }
   #searchbar .search-label {
     font-size: 1.3rem; }
   #searchbar #inputSearch {
@@ -143,8 +146,10 @@ header {
     top: 0;
     left: 0; }
   .intro .intro-wrapper {
-    margin-top: 10vh;
-    font-size: 2rem; }
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 20vh;
+    top: 10vh; }
     @media (min-width: 1700px) {
       .intro .intro-wrapper {
         width: 60%; } }
@@ -164,19 +169,22 @@ header {
         font-size: 1.8rem;
         font-weight: 200;
         width: 80%;
-        text-align: center; }
+        text-align: center;
+        margin: auto; }
         @media (min-width: 992px) {
           .intro .intro-wrapper .logo .welcome {
             font-size: 2.4rem;
             width: 55%; } }
     .intro .intro-wrapper .container-fluid {
       margin: auto;
-      width: 100%;
       overflow: visible; }
       .intro .intro-wrapper .container-fluid .card-wrapper {
+        display: -ms-flexbox;
+        margin: auto;
         justify-content: center;
         align-items: center;
-        min-height: 100px; }
+        min-height: 100px;
+        width: 100%; }
         @media (max-width: 768px) {
           .intro .intro-wrapper .container-fluid .card-wrapper {
             -ms-flex-flow: column;
@@ -184,12 +192,15 @@ header {
         .intro .intro-wrapper .container-fluid .card-wrapper .card-item {
           -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-          margin: 1vw;
+          margin: auto;
           background-color: #2f2d36;
           color: #ccc;
           border: 0.6rem solid #fff;
           position: relative;
           margin-bottom: 25px; }
+          @media (max-width: 665px) {
+            .intro .intro-wrapper .container-fluid .card-wrapper .card-item {
+              width: 60%; } }
           @media (min-width: 768px) {
             .intro .intro-wrapper .container-fluid .card-wrapper .card-item {
               -ms-flex: 0 0 30%;
@@ -231,6 +242,7 @@ header {
               z-index: -2; }
 
 .mission {
+  margin: auto;
   min-height: 300px;
   font-size: 1.5rem;
   display: flex;
@@ -380,12 +392,15 @@ header {
 
 .footer {
   background-color: #2f2d36;
+  display: -ms-flexbox;
   display: flex;
   justify-content: center;
-  flex-flow: row wrap; }
+  flex-flow: row wrap;
+  -ms-flex-flow: row wrap; }
   .footer .contact {
     color: #ccc;
-    padding: 24px 24px 0 24px; }
+    padding: 24px 24px 0 24px;
+    -ms-flex: 0 1 auto; }
     .footer .contact p {
       float: right;
       padding-right: 0; }
@@ -447,6 +462,7 @@ header {
         font-size: 1rem; } }
     .footer .helpful-links .resource-wrapper {
       display: flex;
+      display: -ms-flexbox;
       flex-flow: row; }
       .footer .helpful-links .resource-wrapper .resource {
         list-style-type: none; }
