@@ -39,7 +39,7 @@ html {
 
 header {
   position: fixed;
-  z-index: 2;
+  z-index: 10;
   width: 100%;
 }
 
@@ -113,13 +113,16 @@ header {
   background: $home-dark;
   opacity: 0.6;
   display: flex;
+  display: -ms-flexbox;
   flex-flow: row;
+  -ms-flex-flow: row;
   justify-content: center;
   align-items: center;
   min-height: 60px;
   .input-group {
     @media (min-width: 576px) {
       flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
     }
   }
   .search-label {
@@ -191,8 +194,10 @@ header {
     left: 0;
   }
   .intro-wrapper {
-    margin-top: 10vh;
     font-size: 2rem;
+    text-align: center;
+    margin-top: 20vh;
+    top: 10vh;
     @media (min-width: 1700px) {
       width: 60%;
     }
@@ -215,7 +220,7 @@ header {
         font-weight: 200;
         width: 80%;
         text-align: center;
-
+        margin: auto;
         @media (min-width: 992px) {
           font-size: 2.4rem;
           width: 55%;
@@ -224,12 +229,14 @@ header {
     }
     .container-fluid {
       margin: auto;
-      width: 100%;
       overflow: visible;
       .card-wrapper {
+        display: -ms-flexbox;
+        margin: auto;
         justify-content: center;
         align-items: center;
         min-height: 100px;
+        width: 100%;
         @media (max-width: 768px) {
           -ms-flex-flow: column;
           flex-flow: column;
@@ -237,13 +244,15 @@ header {
         .card-item {
           -ms-flex: 1 0 auto;
           flex: 1 0 auto;
-          margin: 1vw;
+          margin: auto;
           background-color: $home-dark;
           color: $light-text;
           border: 0.6rem solid #fff;
           position: relative;
           margin-bottom: 25px;
-
+          @media (max-width: 665px) {
+            width: 60%;
+          }
           @media (min-width: 768px) {
             -ms-flex: 0 0 30%;
             flex: 0 0 30%;
@@ -256,6 +265,7 @@ header {
             width: 100%;
             font-weight: 200;
             font-size: 1.2rem;
+
             @media (max-width: 765px) {
               font-size: 1.8rem;
             }
@@ -296,6 +306,7 @@ header {
 }
 
 .mission {
+  margin: auto;
   min-height: 300px;
   font-size: 1.5rem;
   display: flex;
@@ -475,14 +486,16 @@ header {
 
 .footer {
   background-color: $home-dark;
+  display: -ms-flexbox;
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
 
   .contact {
     color: $light-text;
     padding: 24px 24px 0 24px;
-
+    -ms-flex: 0 1 auto;
     p {
       float: right;
       padding-right: 0;
@@ -562,6 +575,7 @@ header {
     }
     .resource-wrapper {
       display: flex;
+      display: -ms-flexbox;
       flex-flow: row;
       .resource {
         list-style-type: none;
