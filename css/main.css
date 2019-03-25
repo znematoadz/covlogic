@@ -181,7 +181,7 @@ header {
       .intro .intro-wrapper .container-fluid .card-wrapper {
         display: -ms-flexbox;
         margin: auto;
-        justify-content: center;
+        
         align-items: center;
         min-height: 100px;
         width: 100%; }
